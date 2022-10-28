@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#9E85BDF1">
+
+    <ImageButton
+        android:id="@+id/button5"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="168dp"
+        android:background="#E5C390"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sign2" />
+
+    <ImageButton
+        android:id="@+id/button6"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="260dp"
+        android:background="#E5C390"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sign2" />
+
+    <ImageButton
+        android:id="@+id/button7"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="348dp"
+        android:background="#E5C390"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sign2" />
+
+    <ImageButton
+        android:id="@+id/button8"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="432dp"
+        android:background="#E5C390"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sign2" />
+
+    <TextView
+        android:id="@+id/welcome_sign2"
+        android:layout_width="324dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="44dp"
+        android:text="История болезни питомца"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/buttonBackDies"
+        android:layout_width="101dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#E5C390"
+        android:text="Назад"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textDirection="locale"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+    <ImageButton
+        android:id="@+id/button4"
+        android:layout_width="415dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="76dp"
+        android:background="#E5C390"
+        android:text="Button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/welcome_sign2" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="109dp"
+        android:layout_height="60dp"
+        android:padding="20dp"
+        android:text="12.09.21"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
+        android:padding="18dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView17"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:background="#000000"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="@+id/button4" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="3dp"
+        android:layout_height="60dp"
+        android:background="#000000"
+        app:layout_constraintTop_toTopOf="@+id/button5"
+        tools:layout_editor_absoluteX="109dp" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="109dp"
+        android:layout_height="60dp"
+        android:padding="20dp"
+        android:text="05.04.22"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="299dp"
+        android:layout_height="60dp"
+        android:padding="18dp"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
+</androidx.constraintlayout.widget.ConstraintLayout>
