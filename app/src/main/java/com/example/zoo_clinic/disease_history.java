@@ -28,6 +28,7 @@ public class disease_history extends AppCompatActivity implements View.OnClickLi
         if(button.getId() == R.id.buttonBackDies)
         {
             Intent intent1 = new Intent(this, welcome_screen.class);
+            startActivity(intent1);
         }
     }
 

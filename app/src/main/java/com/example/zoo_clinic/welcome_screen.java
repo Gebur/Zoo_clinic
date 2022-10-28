@@ -38,10 +38,12 @@ public class welcome_screen extends AppCompatActivity implements View.OnClickLis
         if(button.getId() == R.id.CabButton)
         {
             Intent intent1 = new Intent(this, personal_cabinet.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.IllnesButton)
         {
             Intent intent2 = new Intent(this, disease_history.class);
+            startActivity(intent2);
         }
         else if(button.getId() == R.id.RecordButton)
         {
@@ -54,6 +56,7 @@ public class welcome_screen extends AppCompatActivity implements View.OnClickLis
         else if(button.getId() == R.id.logoutButton)
         {
             Intent intent5 = new Intent(this, MainActivity.class);
+            startActivity(intent5);
         }
     }
 }

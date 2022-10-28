@@ -34,10 +34,12 @@ public class personal_cabinet extends AppCompatActivity implements View.OnClickL
         if(button.getId() == R.id.buttonBackCab)
         {
             Intent intent1 = new Intent(this, MainActivity.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.changePasswordButton)
         {
             Intent intent2 = new Intent(this, forget_password.class);
+            startActivity(intent2);
         }
     }
 }

@@ -31,9 +31,11 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
     {
         Button button = findViewById(v.getId());
         if (button.getId() == R.id.buttonNext)
-        {Intent intent = new Intent(this, MainActivity.class);}
+        {Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);}
         else if (button.getId() == R.id.buttonBack) {
-            Intent intent = new Intent(this, personal_cabinet.class);
+            Intent intent1 = new Intent(this, personal_cabinet.class);
+            startActivity(intent1);
         }
     }
 }

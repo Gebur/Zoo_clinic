@@ -31,10 +31,12 @@ public class doctors extends AppCompatActivity implements View.OnClickListener{
         if(button.getId() == R.id.doctorsBack)
         {
             Intent intent1 = new Intent(this, welcome_screen.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.dantistsButton)
         {
             Intent intent2 = new Intent(this, dantists.class);
+            startActivity(intent2);
         }
     }
 

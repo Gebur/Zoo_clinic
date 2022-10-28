@@ -31,10 +31,12 @@ public class password_change extends AppCompatActivity implements View.OnClickLi
         if(button.getId() == R.id.passwordReady)
         {
             Intent intent1 = new Intent(this, MainActivity.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.passwordChangeBack)
         {
             Intent intent2 = new Intent(this, code.class);
+            startActivity(intent2);
         }
     }
 

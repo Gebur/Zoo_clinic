@@ -31,10 +31,12 @@ public class code extends AppCompatActivity implements View.OnClickListener{
         if(button.getId() == R.id.nextCodeButton)
         {
             Intent intent1 = new Intent(this, password_change.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.backCodeButton)
         {
             Intent intent2 = new Intent(this, forget_password.class);
+            startActivity(intent2);
         }
     }
 }

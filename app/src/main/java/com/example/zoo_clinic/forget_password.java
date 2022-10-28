@@ -31,10 +31,12 @@ public class forget_password extends AppCompatActivity implements View.OnClickLi
         if (button.getId() == R.id.forgetBackButton)
         {
             Intent intent1 = new Intent(this, MainActivity.class);
+            startActivity(intent1);
         }
         else if(button.getId() == R.id.codeButton)
         {
             Intent intent2 = new Intent(this, code.class);
+            startActivity(intent2);
         }
     }
 }

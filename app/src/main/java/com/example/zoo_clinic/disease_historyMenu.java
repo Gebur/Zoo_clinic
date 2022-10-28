@@ -28,6 +28,7 @@ public class disease_historyMenu extends AppCompatActivity implements View.OnCli
         if(button.getId() == R.id.menuBack)
         {
             Intent intent1 = new Intent(this, welcome_screen.class);
+            startActivity(intent1);
         }
     }
 

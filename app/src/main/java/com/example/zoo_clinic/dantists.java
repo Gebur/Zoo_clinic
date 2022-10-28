@@ -28,6 +28,7 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
         if(button.getId() == R.id.nextCodeButton)
         {
             Intent intent1 = new Intent(this, doctors.class);
+            startActivity(intent1);
         }
     }
 
