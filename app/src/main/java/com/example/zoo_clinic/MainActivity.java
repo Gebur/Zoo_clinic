@@ -19,6 +19,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.login_screen);
         enterButton = (AppCompatButton) findViewById(R.id.EnterButton);
         RegistrationButton = (AppCompatButton) findViewById(R.id.RegistrationButton);

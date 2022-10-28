@@ -18,6 +18,11 @@ public class welcome_screen extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.welcome_screen);
         CabButton = (AppCompatButton) findViewById(R.id.CabButton);
         IllnesButton = (AppCompatButton) findViewById(R.id.IllnesButton);

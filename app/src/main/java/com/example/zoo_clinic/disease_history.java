@@ -16,6 +16,11 @@ public class disease_history extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.disease_history);
         buttonBackDies = (AppCompatButton) findViewById(R.id.buttonBackDies);
         buttonBackDies.setOnClickListener(this);

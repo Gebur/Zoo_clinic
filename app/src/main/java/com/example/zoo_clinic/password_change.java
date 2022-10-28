@@ -17,6 +17,11 @@ public class password_change extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.activity_password_change);
         passwordReady = (AppCompatButton) findViewById(R.id.passwordReady);
         passwordChangeBack = (AppCompatButton) findViewById(R.id.passwordChangeBack);

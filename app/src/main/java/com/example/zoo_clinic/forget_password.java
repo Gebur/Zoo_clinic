@@ -17,6 +17,11 @@ public class forget_password extends AppCompatActivity implements View.OnClickLi
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.forget_password);
         forgetBackButton = (AppCompatButton) findViewById(R.id.forgetBackButton);
         codeButton = (AppCompatButton) findViewById(R.id.codeButton);

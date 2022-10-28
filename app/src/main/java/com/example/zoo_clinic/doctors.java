@@ -17,6 +17,11 @@ public class doctors extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.available_doctors);
         doctorsBack = (AppCompatButton) findViewById(R.id.doctorsBack);
         doctorsBack.setOnClickListener(this);

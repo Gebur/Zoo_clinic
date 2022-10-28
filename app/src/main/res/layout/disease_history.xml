@@ -118,9 +118,10 @@
         android:id="@+id/textView18"
         android:layout_width="3dp"
         android:layout_height="60dp"
+        android:layout_marginStart="109dp"
         android:background="#000000"
-        app:layout_constraintTop_toTopOf="@+id/button5"
-        tools:layout_editor_absoluteX="109dp" />
+        app:layout_constraintStart_toStartOf="@+id/button5"
+        app:layout_constraintTop_toTopOf="@+id/button5" />
 
     <TextView
         android:id="@+id/textView19"

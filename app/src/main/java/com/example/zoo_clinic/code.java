@@ -17,6 +17,11 @@ public class code extends AppCompatActivity implements View.OnClickListener{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.activity_code);
         nextCodeButton = (AppCompatButton) findViewById(R.id.nextCodeButton);
         backCodeButton = (AppCompatButton) findViewById(R.id.backCodeButton);

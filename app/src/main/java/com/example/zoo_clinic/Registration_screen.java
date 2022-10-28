@@ -9,7 +9,6 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class Registration_screen extends AppCompatActivity implements View.OnClickListener{
@@ -19,6 +18,11 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.registration_screen);
         nextButton = (AppCompatButton) findViewById(R.id.buttonNext);
         buttonBack = (AppCompatButton) findViewById(R.id.buttonBack);

@@ -16,6 +16,11 @@ public class disease_historyMenu extends AppCompatActivity implements View.OnCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try
+        {
+            this.getSupportActionBar().hide();
+        }
+        catch (NullPointerException e){}
         setContentView(R.layout.desiase_storymenu);
         menuBack = (AppCompatButton) findViewById(R.id.menuBack);
         menuBack.setOnClickListener(this);
