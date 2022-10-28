@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.zoo_clinic" android:theme="@style/AppTheme.NoActionBar">
+    package="com.example.zoo_clinic"
+    android:theme="@style/AppTheme.NoActionBar">
 
     <application
         android:allowBackup="true"
@@ -9,6 +10,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoo_clinic">
+        <activity
+            android:name=".Doctors_appointment"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
         <activity
             android:name=".dantists"
             android:exported="true"
@@ -44,8 +52,7 @@
         <activity
             android:name=".personal_cabinet"
             android:exported="true"
-            android:screenOrientation="portrait">
-        </activity>
+            android:screenOrientation="portrait"></activity>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -59,9 +66,7 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
         </activity>
-
         <activity
             android:name=".doctors"
             android:exported="true"
@@ -70,7 +75,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".Registration_screen"
             android:exported="true"
@@ -79,7 +83,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".disease_history"
             android:exported="true"
@@ -88,7 +91,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".disease_historyMenu"
             android:exported="true"
@@ -97,7 +99,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
         <activity
             android:name=".welcome_screen"
             android:exported="true"
@@ -106,8 +107,6 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
-
-
     </application>
 
 </manifest>
