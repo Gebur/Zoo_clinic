@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1044695358068",
+    "firebase_url": "https://zoo-clinic-android-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "zoo-clinic-android",
+    "storage_bucket": "zoo-clinic-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044695358068:android:4a2f33a80740a66addcf21",
+        "android_client_info": {
+          "package_name": "com.example.zoo_clinic"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044695358068-dctmvtiklst4qdbgipqj0j30e12l6956.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD-XQXrZrg-aI-vFMJndixY9vfIJLb4_2E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044695358068-dctmvtiklst4qdbgipqj0j30e12l6956.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
