@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoo_clinic">
         <activity
+            android:name=".doctors_info"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".Doctors_appointment"
             android:exported="false">
             <meta-data
@@ -52,7 +59,7 @@
         <activity
             android:name=".personal_cabinet"
             android:exported="true"
-            android:screenOrientation="portrait"></activity>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".MainActivity"
             android:exported="true"
