@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Zoo_clinic</string>
+    <string name="dantists">Доступные стоматологи</string>
+    <string name="dantsit1">Иванова И.И.</string>
+    <string name="dantsit2">Борисов Б.Б.</string>
+    <string name="dantsit3">Кирилов К.К.</string>
+    <string name="ter">Доступные терапевты</string>
+    <string name="ter1">Мельник А.А</string>
+    <string name="ter2">Кузнецов Б.Б.</string>
+    <string name="ter3">Кузнечиков И.К.</string>
+    <string name="par">Доступные паразитологи</string>
+    <string name="par1">Василькова М.А.</string>
+    <string name="par2">Ромашкова А.М.</string>
+    <string name="heart">Доступные кардиологи</string>
+    <string name="heart1">Максимов Б.Е.</string>
+    <string name="heart2">Егоров А.М.</string>
+    <string name="cancer">Доступные онкологи</string>
+    <string name="cancer1">Родзаевский К.А.</string>
+    <string name="cancer2">Петлин Н.С.</string>
 </resources>

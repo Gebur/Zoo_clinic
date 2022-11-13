@@ -52,7 +52,8 @@ public class welcome_screen extends AppCompatActivity implements View.OnClickLis
         }
         else if(button.getId() == R.id.RecordButton)
         {
-            Intent intent3 = new Intent(this, disease_history.class); //Изменить
+            Intent intent3 = new Intent(this, doctors.class);
+            startActivity(intent3);
         }
         else if(button.getId() == R.id.MyRecordsButton)
         {

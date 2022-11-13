@@ -73,7 +73,9 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="36dp"
         android:background="#E5C390"
+        android:padding="10dp"
         android:text="Далее"
+        android:textAlignment="center"
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView36" />
@@ -85,7 +87,9 @@
         android:layout_marginStart="132dp"
         android:layout_marginTop="24dp"
         android:background="#E5C390"
+        android:padding="10dp"
         android:text="Назад"
+        android:textAlignment="center"
         android:textSize="19sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nextCodeButton" />

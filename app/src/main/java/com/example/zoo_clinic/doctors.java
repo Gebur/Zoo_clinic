@@ -7,12 +7,18 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.content.Intent;
 import android.view.View;
+
 import android.view.View.OnClickListener;
 
 public class doctors extends AppCompatActivity implements View.OnClickListener{
 
+    public int buttonInfo;
     AppCompatButton doctorsBack;
     AppCompatButton dantistsButton;
+    AppCompatButton buttonCard;
+    AppCompatButton buttonTer;
+    AppCompatButton buttonPar;
+    AppCompatButton buttonCanc;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,8 +31,20 @@ public class doctors extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.available_doctors);
         doctorsBack = (AppCompatButton) findViewById(R.id.doctorsBack);
         doctorsBack.setOnClickListener(this);
+        //Дантисты
         dantistsButton = (AppCompatButton) findViewById(R.id.dantistsButton);
         dantistsButton.setOnClickListener(this);
+        //Кардиологи
+        buttonCard = (AppCompatButton) findViewById(R.id.buttonCard);
+        buttonCard.setOnClickListener(this);
+        //Терапевты
+        buttonTer = (AppCompatButton) findViewById(R.id.buttonTer);
+        buttonTer.setOnClickListener(this);
+        //Паразитологи
+        buttonPar = (AppCompatButton) findViewById(R.id.buttonPar);
+        buttonPar.setOnClickListener(this);
+        buttonCanc = (AppCompatButton) findViewById(R.id.buttonCanc);
+        buttonCanc.setOnClickListener(this);
     }
 
     @Override
@@ -38,10 +56,11 @@ public class doctors extends AppCompatActivity implements View.OnClickListener{
             Intent intent1 = new Intent(this, welcome_screen.class);
             startActivity(intent1);
         }
-        else if(button.getId() == R.id.dantistsButton)
-        {
-            Intent intent2 = new Intent(this, dantists.class);
-            startActivity(intent2);
+        else {
+            buttonInfo = button.getId();
+            Intent i = new Intent(doctors.this, dantists.class);
+            i.putExtra("key", buttonInfo);
+            startActivity(i);
         }
     }
 

@@ -36,41 +36,47 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView9">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button"
+            android:id="@+id/buttonCard"
             android:layout_width="400dp"
             android:layout_height="57dp"
             android:layout_marginStart="4dp"
             android:layout_marginTop="16dp"
             android:background="#B39BC8"
             android:outlineProvider="none"
+            android:padding="10dp"
             android:text="Кардиологи"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button11"
+            android:id="@+id/buttonTer"
             android:layout_width="400dp"
             android:layout_height="57dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="35dp"
             android:background="#B39BC8"
+            android:padding="10dp"
             android:text="Терапевты"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonCard" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button12"
+            android:id="@+id/buttonPar"
             android:layout_width="400dp"
             android:layout_height="57dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="35dp"
             android:background="#B39BC8"
+            android:padding="10dp"
             android:text="Паразитологи"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button11" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonTer" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/dantistsButton"
@@ -79,19 +85,23 @@
             android:layout_marginStart="5dp"
             android:layout_marginTop="35dp"
             android:background="#B39BC8"
+            android:padding="10dp"
             android:text="Стоматологи"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/button12" />
+            app:layout_constraintTop_toBottomOf="@+id/buttonPar" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/button14"
+            android:id="@+id/buttonCanc"
             android:layout_width="400dp"
             android:layout_height="57dp"
             android:layout_marginStart="5dp"
             android:layout_marginTop="35dp"
             android:background="#B39BC8"
+            android:padding="10dp"
             android:text="Онкологи"
+            android:textAlignment="center"
             android:textSize="20sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/dantistsButton" />
@@ -105,7 +115,9 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:background="#E5C390"
+        android:padding="10dp"
         android:text="Назад"
+        android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
