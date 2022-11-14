@@ -31,4 +31,24 @@
     <string name="text_heart2">Текст о Егоров А.М.</string>
     <string name="text_cancer1">Текст о Родзаевский К.А.</string>
     <string name="text_cancer2">Текст о Петлин Н.С.</string>
+
+    //Записи о врачах
+    <string name="enroll_dantsit1">Запись к стоматологу Иванова И.И.</string>
+
+    //Для выбора записи
+    <string-array name="dates" textSize="24sp" >
+        <item>05-09 Декабря 2022</item>
+        <item>12-16 Декабря 2022</item>
+        <item>19-23 Декабря 2022</item>
+    </string-array>
+
+    //Для кастомного календаря
+    <string name="calendar_0509">05-09</string>
+    <string name="calendar_1216">12-16</string>
+    <string name="calendar_1923">19-23</string>
+    <string name="calendar_mon">Пон</string>
+    <string name="calendar_vt">Вт</string>
+    <string name="calendar_sr">Ср</string>
+    <string name="calendar_cht">Чт</string>
+    <string name="calendar_fr">Пт</string>
 </resources>

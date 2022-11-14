@@ -11,6 +11,13 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Zoo_clinic">
         <activity
+            android:name=".enrolling"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".doctors_info"
             android:exported="false">
             <meta-data

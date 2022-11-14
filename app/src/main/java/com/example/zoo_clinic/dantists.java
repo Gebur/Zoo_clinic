@@ -51,8 +51,12 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
         }
         else
         {
-            Intent intent2 = new Intent(this, test.class);
+            Intent intent2 = new Intent(this, doctors_info.class);
             startActivity(intent2);
+            buttonInfo = button.getId();
+            Intent i5 = new Intent(dantists.this, doctors_info.class);
+            i5.putExtra("key2", buttonInfo);
+            startActivity(i5);
         }
     }
 
