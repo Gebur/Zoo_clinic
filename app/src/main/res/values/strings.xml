@@ -36,7 +36,7 @@
     <string name="enroll_dantsit1">Запись к стоматологу Иванова И.И.</string>
 
     //Для выбора записи
-    <string-array name="dates" textSize="24sp" >
+    <string-array name="dates" textSize="24sp">
         <item>05-09 Декабря 2022</item>
         <item>12-16 Декабря 2022</item>
         <item>19-23 Декабря 2022</item>

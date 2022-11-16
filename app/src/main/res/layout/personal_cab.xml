@@ -139,19 +139,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/changePasswordButton"
-        android:layout_width="197dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginTop="16dp"
-        android:background="#E5C390"
-        android:onClick="onClick"
-        android:text="Сменить пароль"
-        android:textSize="16sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/discountButton" />
-
     <ImageView
         android:id="@+id/imageView11"
         android:layout_width="300dp"

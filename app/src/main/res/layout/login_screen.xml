@@ -94,25 +94,12 @@
         app:layout_constraintTop_toBottomOf="@+id/PasswordBack"
         tools:ignore="SpeakableTextPresentCheck" />
 
-    <TextView
-        android:id="@+id/ForgotPassword"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="12dp"
-        android:clickable="false"
-        android:text="Забыли пароль?"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/EnterButton" />
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/RegistrationButton"
         android:layout_width="280dp"
         android:layout_height="59dp"
         android:layout_marginStart="64dp"
-        android:layout_marginTop="44dp"
+        android:layout_marginTop="28dp"
         android:background="#E5C390"
         android:text="ЗАРЕГИСТРИРОВАТЬСЯ"
         android:textSize="24sp"

@@ -47,18 +47,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textReg" />
 
     <TextView
-        android:id="@+id/textPassword2"
-        android:layout_width="311dp"
-        android:layout_height="28dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="16dp"
-        android:text="Повторный ввод пароля"
-        android:textColor="#FFFFFF"
-        android:textSize="24dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PasswordBack" />
-
-    <TextView
         android:id="@+id/textPassword3"
         android:layout_width="311dp"
         android:layout_height="28dp"
@@ -68,7 +56,7 @@
         android:textColor="#FFFFFF"
         android:textSize="24dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/SecondPasswordBack" />
+        app:layout_constraintTop_toBottomOf="@+id/PasswordBack" />
 
     <LinearLayout
         android:id="@+id/EmailBackground"
@@ -110,34 +98,15 @@
 
     <TextView
         android:id="@+id/textPass"
-        android:layout_width="101dp"
-        android:layout_height="28dp"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
         android:layout_marginStart="28dp"
         android:layout_marginTop="16dp"
-        android:text="Пароль"
+        android:text="Пароль (не меньше 3 символов и 3 цифр, без спецзнаков)"
         android:textColor="#FFFFFF"
-        android:textSize="24dp"
+        android:textSize="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/EmailBackground" />
-
-    <LinearLayout
-        android:id="@+id/SecondPasswordBack"
-        android:layout_width="350dp"
-        android:layout_height="70dp"
-        android:layout_marginStart="28dp"
-        android:layout_marginTop="8dp"
-        android:background="#FFFFFF"
-        android:orientation="vertical"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textPassword2">
-
-        <EditText
-            android:id="@+id/TextPasswordSecond"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:ems="10"
-            android:inputType="textPassword" />
-    </LinearLayout>
 
     <LinearLayout
         android:id="@+id/PetNameBack"
@@ -173,7 +142,7 @@
     <LinearLayout
         android:id="@+id/PetTypeBack"
         android:layout_width="351dp"
-        android:layout_height="69dp"
+        android:layout_height="62dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="8dp"
         android:background="#FFFFFF"

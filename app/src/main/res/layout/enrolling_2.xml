@@ -69,6 +69,7 @@
         android:layout_marginTop="392dp"
         android:background="@drawable/my_button_bg"
         android:text="17:00 - 18:30"
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -125,6 +126,7 @@
         android:layout_marginTop="324dp"
         android:background="@drawable/my_button_bg"
         android:text="15:00 - 16:30"
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -203,6 +205,7 @@
         android:layout_marginTop="256dp"
         android:background="@drawable/my_button_bg"
         android:text="13:00 - 14:30"
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -270,6 +273,7 @@
         android:layout_marginTop="188dp"
         android:background="@drawable/my_button_bg"
         android:text="11:00 - 12:30"
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -337,6 +341,7 @@
         android:layout_marginTop="120dp"
         android:background="@drawable/my_button_bg"
         android:text="09:00 - 10:30"
+        android:clickable="false"
         android:textAlignment="center"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
@@ -349,6 +354,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_fr"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -360,6 +366,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_cht"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -371,6 +378,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_sr"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -382,6 +390,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_vt"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -393,6 +402,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_mon"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
@@ -461,6 +471,7 @@
         android:layout_marginTop="52dp"
         android:background="@drawable/my_button_bg"
         android:text="@string/calendar_0509"
+        android:clickable="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 

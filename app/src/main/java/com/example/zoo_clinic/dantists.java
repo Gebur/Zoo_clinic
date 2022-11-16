@@ -12,7 +12,7 @@ import android.widget.TextView;
 
 public class dantists extends AppCompatActivity implements View.OnClickListener{
 
-    public int HolyShitManager;
+    public int PrevButton;
     AppCompatButton dantBack;
     AppCompatButton doctorName1;
     AppCompatButton doctorName2;
@@ -44,7 +44,7 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v)
     {
         Button button = findViewById(v.getId());
-        if(button.getId() == R.id.nextCodeButton)
+        if(button.getId() == R.id.dantBack)
         {
             Intent intent1 = new Intent(this, doctors.class);
             startActivity(intent1);
@@ -65,16 +65,16 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
         Bundle extras = getIntent().getExtras();
         if (extras != null)
         {
-            HolyShitManager = extras.getInt("key");
+            PrevButton = extras.getInt("key");
         }
-        if (HolyShitManager == R.id.dantistsButton)
+        if (PrevButton == R.id.dantistsButton)
         {
             textView40.setText(R.string.dantists);
             doctorName1.setText(R.string.dantsit1);
             doctorName2.setText(R.string.dantsit2);
             doctorName3.setText(R.string.dantsit3);
         }
-        if (HolyShitManager == R.id.buttonCard)
+        if (PrevButton == R.id.buttonCard)
         {
             textView40.setText(R.string.heart);
             doctorName1.setText(R.string.heart1);
@@ -82,21 +82,21 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
             doctorName3.setVisibility(View.GONE);
             doctorName3.setClickable(false);
         }
-        if (HolyShitManager == R.id.buttonTer)
+        if (PrevButton == R.id.buttonTer)
         {
             textView40.setText(R.string.ter);
             doctorName1.setText(R.string.ter1);
             doctorName2.setText(R.string.ter2);
             doctorName3.setText(R.string.ter3);
         }
-        if (HolyShitManager == R.id.buttonTer)
+        if (PrevButton == R.id.buttonTer)
         {
             textView40.setText(R.string.ter);
             doctorName1.setText(R.string.ter1);
             doctorName2.setText(R.string.ter2);
             doctorName3.setText(R.string.ter3);
         }
-        if (HolyShitManager == R.id.buttonPar)
+        if (PrevButton == R.id.buttonPar)
         {
             textView40.setText(R.string.par);
             doctorName1.setText(R.string.par1);
@@ -104,7 +104,7 @@ public class dantists extends AppCompatActivity implements View.OnClickListener{
             doctorName3.setVisibility(View.GONE);
             doctorName3.setClickable(false);
         }
-        if (HolyShitManager == R.id.buttonCanc)
+        if (PrevButton == R.id.buttonCanc)
         {
             textView40.setText(R.string.cancer);
             doctorName1.setText(R.string.cancer1);

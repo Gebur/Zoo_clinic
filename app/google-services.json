@@ -1,7 +1,7 @@
 {
   "project_info": {
     "project_number": "1044695358068",
-    "firebase_url": "https://zoo-clinic-android-default-rtdb.europe-west1.firebasedatabase.app",
+    "firebase_url": "https://zoo-clinic-android-default-rtdb.europe-west1.firebasedatabase.app/",
     "project_id": "zoo-clinic-android",
     "storage_bucket": "zoo-clinic-android.appspot.com"
   },
