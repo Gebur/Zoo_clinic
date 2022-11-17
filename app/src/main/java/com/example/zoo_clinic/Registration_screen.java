@@ -30,8 +30,8 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
 
     AppCompatButton nextButton;
     AppCompatButton buttonBack;
-    EditText EmailAddress, TextPasswordSecond;
-    EditText TextPassword;
+    EditText EmailAddress, editTextTextPersonName;
+    EditText TextPassword, petTypeText;
     private FirebaseAuth mAuth;
     // creating a variable
     // for firebasefirestore.
@@ -55,6 +55,8 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
         nextButton.setOnClickListener(this);
         TextPassword = (EditText) findViewById(R.id.TextPassword);
         EmailAddress = (EditText) findViewById(R.id.EmailAddress);
+        editTextTextPersonName = (EditText) findViewById(R.id.editTextTextPersonName);
+        petTypeText = (EditText) findViewById(R.id.editTextTextPersonName);
     }
 
     @Override
@@ -73,9 +75,11 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
 
     private void registerNewUser()
     {
-        String email, password, password2;
+        String email, password, pet, pet_type;
         email = EmailAddress.getText().toString();
         password = TextPassword.getText().toString();
+        pet = editTextTextPersonName.getText().toString();
+        pet_type = petTypeText.getText().toString();
 
         // Проверка на ввод
         if (TextUtils.isEmpty(email)) {
@@ -84,15 +88,25 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
                             Toast.LENGTH_LONG).show();
             return;
         }
-        if (TextUtils.isEmpty(password)) {
+        else if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(),
                             "Пожалуйста введите пароль!",
                             Toast.LENGTH_LONG).show();
             return;
         }
+        else if (TextUtils.isEmpty(pet)) {
+            Toast.makeText(getApplicationContext(),
+                    "Пожалуйста введите имя питомца!",
+                    Toast.LENGTH_LONG).show();
+        }
+        else if (TextUtils.isEmpty(pet_type)) {
+            Toast.makeText(getApplicationContext(),
+                    "Пожалуйста введите тип питомца!",
+                    Toast.LENGTH_LONG).show();
+        }
         else
         {
-            addDataToFirestore(email, password);
+            addDataToFirestore(email, password, pet, pet_type);
         }
 
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -121,13 +135,13 @@ public class Registration_screen extends AppCompatActivity implements View.OnCli
 
     }
 
-    private void  addDataToFirestore(String email, String password)
+    private void  addDataToFirestore(String email, String password, String pet, String pet_type)
     {
         // Создание коллекции для Firebase
         CollectionReference dbData = db.collection("PassLog");
 
         // Добовление инфы в класс.
-        PassLog passLog = new PassLog(email, password);
+        PassLog passLog = new PassLog(email, password, pet, pet_type);
 
         // Должно заносить данные в Firebase или я съем свою ногу.
         dbData.add(passLog).addOnSuccessListener(new OnSuccessListener<DocumentReference>() {

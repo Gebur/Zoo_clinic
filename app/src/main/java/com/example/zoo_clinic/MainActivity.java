@@ -33,12 +33,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     AppCompatButton enterButton;
     AppCompatButton RegistrationButton;
 
-    // creating a variable for
-    // our Firebase Database.
+    //Для поиска логин
+    private String loginFind;
+    String parol;
+
+    // Переменная для Firebase
     FirebaseDatabase firebaseDatabase;
+
+    // Firebase reference
+    DatabaseReference databaseReference;
 
     EditText EmailAddress;
     EditText TextPassword;
+
+    String For_password;
+    String For_login;
 
     private FirebaseAuth mAuth;
 
@@ -51,7 +60,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         catch (NullPointerException e){}
         mAuth = FirebaseAuth.getInstance();
-
         setContentView(R.layout.login_screen);
         enterButton = (AppCompatButton) findViewById(R.id.EnterButton);
         RegistrationButton = (AppCompatButton) findViewById(R.id.RegistrationButton);
@@ -61,6 +69,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         EmailAddress = findViewById(R.id.EmailAddress);
         TextPassword = findViewById(R.id.TextPassword);
+
+        // Вот это для вытасквивания данных
+        firebaseDatabase = FirebaseDatabase.getInstance();
+
+        // Какой референс искать
+        databaseReference = firebaseDatabase.getReference("Data");
+
+        // calling method
+        // for getting data.
+        getdata();
+
+        loginFind = EmailAddress.getText().toString();
 
     }
 
@@ -80,8 +100,36 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
          }
          }
 
-    private void loginUserAccount()
-    {
+    private void getdata() {
+
+        // calling add value event listener method
+        // for getting the values from database.
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot passwordFind) {
+                // this method is call to get the realtime
+                // updates in the data.
+                // this method is called when the data is
+                // changed in our Firebase console.
+                // below line is for getting the data from
+                // snapshot of our database.
+                parol = passwordFind.getValue(String.class);
+
+                // after getting the value we are setting
+                // our value to our text view in below line.
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+                // calling on cancelled method when we receive
+                // any error or we are not able to get the data.
+                Toast.makeText(MainActivity.this, "Всё опять пошло не по плану.", Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    private void loginUserAccount() {
         String email, password;
         email = EmailAddress.getText().toString();
         password = TextPassword.getText().toString();
@@ -89,42 +137,40 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         // Проверка на ввод пароля и логина
         if (TextUtils.isEmpty(email)) {
             Toast.makeText(getApplicationContext(),
-                            "Пожалуйста, введите email!",
-                            Toast.LENGTH_LONG).show();
+                    "Пожалуйста, введите email!",
+                    Toast.LENGTH_LONG).show();
             return;
         }
 
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(),
-                            "Пожалуйста, введите пароль!",
-                            Toast.LENGTH_LONG).show();
+                    "Пожалуйста, введите пароль!",
+                    Toast.LENGTH_LONG).show();
             return;
         }
+        if (parol == password) {
+            mAuth.signInWithEmailAndPassword(email, password)
+                    .addOnCompleteListener(
+                            new OnCompleteListener<AuthResult>() {
+                                @Override
+                                public void onComplete(
+                                        @NonNull Task<AuthResult> task) {
+                                    if (task.isSuccessful()) {
+                                        Toast.makeText(getApplicationContext(),
+                                                        "Успешный вход в личный кабинет!",
+                                                        Toast.LENGTH_LONG)
+                                                .show();
 
-        mAuth.signInWithEmailAndPassword(email, password)
-                .addOnCompleteListener(
-                        new OnCompleteListener<AuthResult>() {
-                            @Override
-                            public void onComplete(
-                                    @NonNull Task<AuthResult> task)
-                            {
-                                if (task.isSuccessful()) {
-                                    Toast.makeText(getApplicationContext(),
-                                                    "Успешный вход в личный кабинет!",
-                                                    Toast.LENGTH_LONG)
-                                            .show();
-
-                                    Intent intent = new Intent(MainActivity.this, welcome_screen.class);
-                                    startActivity(intent);
+                                        Intent intent = new Intent(MainActivity.this, welcome_screen.class);
+                                        startActivity(intent);
+                                    } else {
+                                        Toast.makeText(getApplicationContext(),
+                                                "Войти в личный кабинет не удалось",
+                                                Toast.LENGTH_LONG).show();
+                                    }
                                 }
-
-                                else {
-                                    Toast.makeText(getApplicationContext(),
-                                                    "Войти в личный кабинет не удалось",
-                                                    Toast.LENGTH_LONG).show();
-                                }
-                            }
-                        });
+                            });
+        }
     }
 
     }
