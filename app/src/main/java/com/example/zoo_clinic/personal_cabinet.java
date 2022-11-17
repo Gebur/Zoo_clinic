@@ -35,7 +35,22 @@ public class personal_cabinet extends AppCompatActivity implements View.OnClickL
         discountButton.setOnClickListener(this);
     }
 
-    public void onCreate()
+    @Override
+    public void onClick(View view)
+    {
+        Button button = findViewById(view.getId());
+        if(button.getId() == R.id.buttonBackCab)
+        {
+            Intent intent1 = new Intent(this, welcome_screen.class);
+            startActivity(intent1);
+        }
+        if(button.getId() == R.id.discountButton)
+        {
+            disc();
+        }
+    }
+
+    public void disc()
     {
         String promo1;
         int promo2;
@@ -56,14 +71,4 @@ public class personal_cabinet extends AppCompatActivity implements View.OnClickL
         }
     }
 
-    @Override
-    public void onClick(View view)
-    {
-        Button button = findViewById(view.getId());
-        if(button.getId() == R.id.buttonBackCab)
-        {
-            Intent intent1 = new Intent(this, welcome_screen.class);
-            startActivity(intent1);
-        }
-    }
 }

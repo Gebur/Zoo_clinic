@@ -18,6 +18,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.AuthResult;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import kotlin.Metadata;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -27,7 +28,17 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.database.annotations.NotNull;
 
+import kotlin.jvm.internal.Intrinsics;
+
+@Metadata(
+        mv = {1, 7, 1},
+        k = 1,
+        xi = 48,
+        d1 = {"\u0000\u0018\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\u0018\u00002\u00020\u0001B\u0005¢\u0006\u0002\u0010\u0002J\u0012\u0010\u0003\u001a\u00020\u00042\b\u0010\u0005\u001a\u0004\u0018\u00010\u0006H\u0014¨\u0006\u0007"},
+        d2 = {"Lcom/gridness/assignment/Categories;", "Landroidx/appcompat/app/AppCompatActivity;", "()V", "onCreate", "", "savedInstanceState", "Landroid/os/Bundle;", "app_debug"}
+)
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     AppCompatButton enterButton;
@@ -48,6 +59,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     String For_password;
     String For_login;
+    String login;
 
     private FirebaseAuth mAuth;
 
@@ -81,6 +93,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         getdata();
 
         loginFind = EmailAddress.getText().toString();
+        login = loginFind;
 
     }
 
@@ -102,29 +115,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void getdata() {
 
-        // calling add value event listener method
-        // for getting the values from database.
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot passwordFind) {
-                // this method is call to get the realtime
-                // updates in the data.
-                // this method is called when the data is
-                // changed in our Firebase console.
-                // below line is for getting the data from
-                // snapshot of our database.
-                parol = passwordFind.getValue(String.class);
-
-                // after getting the value we are setting
-                // our value to our text view in below line.
-
+                parol = passwordFind.getValue(FindLogin.class).toString();
             }
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
                 // calling on cancelled method when we receive
                 // any error or we are not able to get the data.
-                Toast.makeText(MainActivity.this, "Всё опять пошло не по плану.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "Возникла проблема с подключением.", Toast.LENGTH_SHORT).show();
             }
         });
     }
